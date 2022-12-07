@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+main {
+  margin-top: 220px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.container {
+  padding: 5rem;
+}
+body {
+  color: #0b0b0b;
+  background-color: #f4f1ec;
+  font-family: 'Source Sans Pro', sans-serif;
+  /* font-size: 20px; */
+}
+
+#button {
+  padding: 10px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #0b0b0b;
+  background-color: #f7f7f2;
+  color: blueviolet;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: large;
+  font-style: inherit;
+  font-weight: 600;
+}
+
+#listfoods {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.card-title {
+  color: blueviolet;
+  font-size: 0.8em;
+}
+.card-text {
+  color: blueviolet;
+  font-size: 0.5em;
+  font-style: italic;
+}
+
+

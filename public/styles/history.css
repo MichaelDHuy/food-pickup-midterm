@@ -1,0 +1,39 @@
+body {
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 300px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/images/arches.png");
+}
+
+#history {
+  width: 70%;
+}
+
+#records {
+  width: 100%;
+  border-spacing: 0 25px;
+}
+#records thead {
+  width: 90%;
+}
+#records thead tr {
+  font-size: 25px;
+}
+#records tbody {
+  width: 90%;
+  font-family: "Poppins", sans-serif;
+}
+#records tbody tr {
+  font-size: 20px;
+}
+#records tbody td {
+  text-align: center;
+}
+#records tbody input {
+  width: 10%;
+}

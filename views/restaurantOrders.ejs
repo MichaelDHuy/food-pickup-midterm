@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Owner</title>
+
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/stylesrest/restnav.css" type="text/css" />
+  <link rel="stylesheet" href="/stylesrest/restlayout.css" type="text/css" />
+
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/app.js"></script>
+</head>
+
+<body>
+  <nav>
+    <span class ="titleleft">FAANG Restaurant</span>
+    <div class ="titleright"><div>Logout</div>
+    <i class="fa-solid fa-angles-down"></i>
+    </div>
+  </nav>
+
+
+  <main style="margin-top: 10em;">
+ <div id="imgRestaurant" class="jumbotron jumbotron-fluid d-flex flex-column justify-content-center pl-5 my-0">
+    <h2>CurrentOrders</h2>
+  </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Order List</th>
+          <th scope="col">Client Name</th>
+          <th scope="col">Start Time</th>
+          <th scope="col">Finish Time</th>
+          <th scope="col">Ready</th>
+          <th scope="col">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (let id in urls) { %>
+          <tr>
+            <td><%=Number(id)+Number(1)%></td>
+              <td><%= urls[id].name %></td>
+              <td><%= urls[id].start_time.toLocaleString('en-GB', { timeZone: 'UTC' }) %></td>
+              <td><%=urls[id].end_time?urls[id].end_time.toLocaleString('en-GB', { timeZone: 'UTC' }):"" %></td>
+              <td style="color: hsl(0, 100%, 50%);"><%= urls[id].ready %></td>
+            <td><form method="GET" action='/api/widgets/<%= urls[id].id%>'>
+              <button type="submit" class="btn btn-primary">Edit</button>
+              </form></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </main>
+
+</body>
+
+</html>
